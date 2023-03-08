@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Titillium+Web:wght@200;300;400;600;700&family=Work+Sans:wght@100;300;400;600;800&family=Yellowtail&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Menu*/
+.contenedor-header{
+    background:indianred;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: antiquewhite;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color:aqua;
+}
+.nav-responsive{
+    background-color: black;
+    color:antiquewhite;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*Seccion I-nicio*/
+.inicio{
+    background: linear-gradient(to top, rgba(171, 87, 96, 0.8), rgb(190, 99, 111)),
+    url(imagenes/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenedor-banner{
+    padding: 20px;
+    background-color: indianred;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenedor-banner img{
+    margin-top: 40px;
+    border: 10px outset rgb(167, 21, 94);
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 70%;
+}
+.inicio .contenedor-banner h1{
+    margin-top: 40px;
+    font-size: 32px;
+    font-family: 'Righteous';
+}
+.inicio .contenedor-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenedor-banner .redes a{
+    color: rgba(50, 5, 59, 0.681);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px outset rgb(22, 24, 21);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenedor-banner a:hover{
+    background-color: aqua;
+}
+.acercademi{
+    background-color:lightcoral;
+    color: rgba(50, 5, 59, 0.681);
+    padding: 50px 20px;
+}
+.acercademi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.acercademi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.acercademi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.acercademi .contenido-seccion p span{
+    color: rgba(50, 5, 59, 0.681);
+    font-weight: bold;
+}
+.acercademi .fila{
+    display: flex;
+}
+.acercademi .fila .col{
+    width: 50%;
+}
+.acercademi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.acercademi .fila .col ul{
+    list-style: none;
+}
+.acercademi .fila .col ul li{
+    margin: 12px 0;
+}
+.acercademi .fila .col ul li strong{
+    display: inline-block;
+    color: rgba(50, 5, 59, 0.681);
+    width: 130px;
+}
+.acercademi .fila .col ul li span{
+    background-color: rgba(157, 91, 170, 0.681);
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.acercademi .fila .col .intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.acercademi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(181, 137, 106, 0.681);
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.acercademi .fila .col .contenedor-intereses .interes:hover{
+    background-color: aqua;
+}
+.acercademi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.acercademi button{
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid rgba(181, 137, 106, 0.681);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: black;
+    position: relative;
+    z-index: 10;
+}
+.acercademi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    z-index: -1;
+    transition: 1s;
+}
+.acercademi button:hover .overlay{
+    width: 100%;
+}
+
+/*SECCION HABILIDADES*/
+
+.habilidades{
+    background-color:rgb(228, 83, 83);
+    color: rgba(50, 5, 59, 0.681);
+    padding: 10px 20px;
+}
+.habilidades .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.habilidades h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.habilidades .fila{
+    display: flex;
+}
+.habilidades .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.habilidades .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.habilidades .habilidades >span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.habilidades .habilidades .barra-habilidad{
+    height: 8px;
+    width: 80%;
+    background-color: rgb(65, 175, 175);
+    position: relative;
+    margin-bottom: 30px;
+}
+.habilidades .habilidades .progreso{
+    background-color: aqua;
+    position: absolute;
+    top: o;
+    left: 0;
+    height: 8px;
+}
+.habilidades .habilidades .barra-habilidad span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color:rgb(117, 117, 182);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+.habilidades .habilidades .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+.habilidades .habilidades .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+.habilidades .habilidades .sistemasoperativos{
+    width: 0%;
+    animation: 2s sistemasoperativos forwards;
+}
+@keyframes sistemasoperativos {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.habilidades .habilidades .aplicacioneserp{
+    width: 0%;
+    animation: 2s aplicacioneserp forwards;
+}
+@keyframes aplicacioneserp {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.habilidades .habilidades .operadordepc{
+    width: 0%;
+    animation: 2s operadordepc forwards;
+}
+@keyframes operadordepc {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.habilidades .habilidades .reparaciondepcredes{
+    width: 0%;
+    animation: 2s reparaciondepcredes forwards;
+}
+@keyframes reparaciondepcredes {
+    0%{width: 0%;}
+    100%{width: 79%;}
+}
+.habilidades .habilidades .servidores{
+    width: 0%;
+    animation: 2s servidores forwards;
+}
+@keyframes servidores {
+    0%{width: 0%;}
+    100%{width: 73%;}
+}
+.habilidades .habilidades .trabajoenequipo{
+    width: 0%;
+    animation: 2s trabajoenequipo forwards;
+}
+@keyframes trabajoenequipo {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.habilidades .habilidades .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+.habilidades .habilidades .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+.habilidades .habilidades .resoluciondeproblemas{
+    width: 0%;
+    animation: 2s resoluciondeproblemas forwards;
+}
+@keyframes resoluciondeproblemas {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.habilidades .habilidades .experiencia{
+    width: 0%;
+    animation: 2s experiencia forwards;
+}
+@keyframes experiencia {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+.habilidades .habilidades .trabajobajopresion{
+    width: 0%;
+    animation: 2s trabajobajopresion forwards;
+}
+@keyframes trabajobajopresion {
+    0%{width: 0%;}
+    100%{width: 77%;}
+}
+.habilidades .habilidades .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+/*SECCION CURRICULUM */
+
+.curriculum{
+    background-color:rgb(228, 83, 83);
+    color: rgba(50, 5, 59, 0.681);
+    padding: 10px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid rgb(225, 47, 47);
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid rgb(225, 47, 47);
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(228, 83, 83);
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color: antiquewhite;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid rgb(225, 47, 47);
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-right: 2px solid rgb(225, 47, 47);
+    margin-right: 20px;
+}
+/*SECCION CONTACTO */
+.contacto{
+    background-image: url(https://www.interbanderas.com/wp-content/uploads/2017/03/fondo-contacto.jpg);
+    background-color: antiquewhite;
+    color: rgb(13, 39, 39);
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+max-width: 1100px;
+margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: aquamarine;
+    color: rgb(187, 143, 85);
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid rgba(181, 137, 106, 0.681);
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: black;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: aquamarine;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    position: absolute;
+    top:40%;
+    background-color: rgb(161, 119, 161);
+    padding: 20px;
+    width: 370px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: rgb(158, 46, 121);
+    display: inline-block;
+    margin-right: 20px;
+}
+footer{
+    background-color:indianred;
+    color: black;
+    padding: 30px 0 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: rgba(50, 5, 59, 0.681);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px outset rgb(22, 24, 21);
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+/*SECCION RESPONSIVE*/
+@media screen and (max-width:980px) {
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }    
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color:rgb(190, 99, 111);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid rgb(191, 64, 81);
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px) {
+    .acercademi .fila{
+        display: block;
+    }
+    .acercademi .fila .col{
+        width: fit-content;
+    }
+    .habilidades .fila{
+        display: block;
+    } 
+    .habilidades .fila .col{
+        width: 100%;
+    }
+    .habilidades .fila .col .barra-habilidad{
+        width: 100%;
+    }    
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
